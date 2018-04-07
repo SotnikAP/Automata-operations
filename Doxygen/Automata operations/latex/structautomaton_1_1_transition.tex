@@ -1,0 +1,40 @@
+\hypertarget{structautomaton_1_1_transition}{}\section{РЎС‚СЂСѓРєС‚СѓСЂР° automaton\+:\+:Transition}
+\label{structautomaton_1_1_transition}\index{automaton\+::\+Transition@{automaton\+::\+Transition}}
+
+
+Structure of transition.  
+
+
+
+
+{\ttfamily \#include $<$Automaton.\+h$>$}
+
+\subsection*{РћС‚РєСЂС‹С‚С‹Рµ Р°С‚СЂРёР±СѓС‚С‹}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structautomaton_1_1_transition_ac5becb494aff59a873a8d024e06b78db}\label{structautomaton_1_1_transition_ac5becb494aff59a873a8d024e06b78db}} 
+bool \mbox{\hyperlink{structautomaton_1_1_transition_ac5becb494aff59a873a8d024e06b78db}{fin\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em Является ли текущее состояние финальным. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structautomaton_1_1_transition_af2efbef2366dd50314ace7bf5a36f90f}\label{structautomaton_1_1_transition_af2efbef2366dd50314ace7bf5a36f90f}} 
+bool \mbox{\hyperlink{structautomaton_1_1_transition_af2efbef2366dd50314ace7bf5a36f90f}{init\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em Является ли текущее состояние начальным. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structautomaton_1_1_transition_a42d1906128c6c80cc57bcc57734759e6}\label{structautomaton_1_1_transition_a42d1906128c6c80cc57bcc57734759e6}} 
+int $\ast$ \mbox{\hyperlink{structautomaton_1_1_transition_a42d1906128c6c80cc57bcc57734759e6}{Actions\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em Массива, где индексы == символы действия, а элементы == состояния, в которые мы перейдем по данному символу. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{РџРѕРґСЂРѕР±РЅРѕРµ РѕРїРёСЃР°РЅРёРµ}
+Structure of transition. 
+
+
+\begin{DoxyPre}
+\mbox{\hyperlink{structautomaton_1_1_transition}{Transition}} on it's own is useless, because it doesn't have information about current state.
+Common view:
+fin | init | 0 | 1 | ... | N  | --- \mbox{\hyperlink{structautomaton_1_1_transition}{Transition}}, where 0, 1, ... N - is indexes of array == actions and elements are states we go from that action.
+\end{DoxyPre}
+ 
+
+РћР±СЉСЏРІР»РµРЅРёСЏ Рё РѕРїРёСЃР°РЅРёСЏ С‡Р»РµРЅРѕРІ СЃС‚СЂСѓРєС‚СѓСЂ РЅР°С…РѕРґСЏС‚СЃСЏ РІ С„Р°Р№Р»Р°С…\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Sotnik/\+Documents/\+Visual Studio 2015/\+Projects/\+Automata\+Operations/\+Automata\+Operations/\mbox{\hyperlink{_automaton_8h}{Automaton.\+h}}\item 
+C\+:/\+Users/\+Sotnik/\+Documents/\+Visual Studio 2015/\+Projects/\+Automata\+Operations/\+Automata\+Operations/\mbox{\hyperlink{_automaton_8cpp}{Automaton.\+cpp}}\end{DoxyCompactItemize}

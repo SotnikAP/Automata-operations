@@ -1,0 +1,93 @@
+\hypertarget{classautomaton_1_1_automaton}{}\section{Класс automaton\+:\+:Automaton}
+\label{classautomaton_1_1_automaton}\index{automaton\+::\+Automaton@{automaton\+::\+Automaton}}
+
+
+Describes automaton.  
+
+
+
+
+{\ttfamily \#include $<$Automaton.\+h$>$}
+
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classautomaton_1_1_automaton_a928fe129c26a826a703e4683587568f6}\label{classautomaton_1_1_automaton_a928fe129c26a826a703e4683587568f6}} 
+{\bfseries Automaton} (const \mbox{\hyperlink{classautomaton_1_1_automaton}{Automaton}} \&init\+Autom)
+\item 
+\mbox{\hyperlink{classautomaton_1_1_automaton}{Automaton}} \mbox{\hyperlink{classautomaton_1_1_automaton_a3e997b515536e08f97e3fef599e51d8f}{right\+Quotient}} (const \mbox{\hyperlink{classautomaton_1_1_automaton}{Automaton}} \&sec\+Automaton) const
+\begin{DoxyCompactList}\small\item\em Makes right quotient. L\+E\+F\+T/\+R\+I\+G\+HT. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classautomaton_1_1_automaton}{Automaton}} \mbox{\hyperlink{classautomaton_1_1_automaton_ab6ffe327d6e520f3d3c8bdf5170e53d6}{left\+Quotient}} (const \mbox{\hyperlink{classautomaton_1_1_automaton}{Automaton}} \&sec\+Automaton) const
+\begin{DoxyCompactList}\small\item\em Makes left quotient. R\+I\+G\+H\+T/\+L\+E\+FT. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classautomaton_1_1_automaton_a9a1c46a6e72dcb748017e397aaf005e3}\label{classautomaton_1_1_automaton_a9a1c46a6e72dcb748017e397aaf005e3}} 
+\mbox{\hyperlink{classautomaton_1_1_automaton}{Automaton}} \& {\bfseries operator=} (const \mbox{\hyperlink{classautomaton_1_1_automaton}{Automaton}} \&v)
+\end{DoxyCompactItemize}
+\subsection*{Друзья}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classautomaton_1_1_automaton_a5ab2e601e3ac7567e9ceaf410ebb9762}\label{classautomaton_1_1_automaton_a5ab2e601e3ac7567e9ceaf410ebb9762}} 
+std\+::ostream \& \mbox{\hyperlink{classautomaton_1_1_automaton_a5ab2e601e3ac7567e9ceaf410ebb9762}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classautomaton_1_1_automaton}{Automaton}} \&automaton)
+\begin{DoxyCompactList}\small\item\em Writes automaton in the console. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classautomaton_1_1_automaton_ab49c0362ae9daafaffd1e252601c1874}\label{classautomaton_1_1_automaton_ab49c0362ae9daafaffd1e252601c1874}} 
+std\+::ofstream \& \mbox{\hyperlink{classautomaton_1_1_automaton_ab49c0362ae9daafaffd1e252601c1874}{operator$<$$<$}} (std\+::ofstream \&ofs, const \mbox{\hyperlink{classautomaton_1_1_automaton}{Automaton}} \&automaton)
+\begin{DoxyCompactList}\small\item\em Writes automaton in the file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classautomaton_1_1_automaton_aa21b7fbccaa6a68ec1cc285f490dc9de}\label{classautomaton_1_1_automaton_aa21b7fbccaa6a68ec1cc285f490dc9de}} 
+std\+::ifstream \& \mbox{\hyperlink{classautomaton_1_1_automaton_aa21b7fbccaa6a68ec1cc285f490dc9de}{operator$>$$>$}} (std\+::ifstream \&ifs, \mbox{\hyperlink{classautomaton_1_1_automaton}{Automaton}} \&automaton)
+\begin{DoxyCompactList}\small\item\em Read automaton from the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Describes automaton. 
+
+
+\begin{DoxyPre}
+\mbox{\hyperlink{classautomaton_1_1_automaton}{Automaton}} is array of transitions.
+Array index is current state in transition.
+Common view of automaton:
+Cur state | fin | init | 0 | 1 | ... | N
+\end{DoxyPre}
+ 
+
+\subsection{Методы}
+\mbox{\Hypertarget{classautomaton_1_1_automaton_ab6ffe327d6e520f3d3c8bdf5170e53d6}\label{classautomaton_1_1_automaton_ab6ffe327d6e520f3d3c8bdf5170e53d6}} 
+\index{automaton\+::\+Automaton@{automaton\+::\+Automaton}!left\+Quotient@{left\+Quotient}}
+\index{left\+Quotient@{left\+Quotient}!automaton\+::\+Automaton@{automaton\+::\+Automaton}}
+\subsubsection{\texorpdfstring{left\+Quotient()}{leftQuotient()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classautomaton_1_1_automaton}{Automaton}} Automaton\+::left\+Quotient (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classautomaton_1_1_automaton}{Automaton}} \&}]{sec\+Automaton }\end{DoxyParamCaption}) const}
+
+
+
+Makes left quotient. R\+I\+G\+H\+T/\+L\+E\+FT. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em sec\+Automaton} & -\/ right (second) automaton of left quotient. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+left\+Quotient -\/ automaton which describes left quotient of two initial automata. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classautomaton_1_1_automaton_a3e997b515536e08f97e3fef599e51d8f}\label{classautomaton_1_1_automaton_a3e997b515536e08f97e3fef599e51d8f}} 
+\index{automaton\+::\+Automaton@{automaton\+::\+Automaton}!right\+Quotient@{right\+Quotient}}
+\index{right\+Quotient@{right\+Quotient}!automaton\+::\+Automaton@{automaton\+::\+Automaton}}
+\subsubsection{\texorpdfstring{right\+Quotient()}{rightQuotient()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classautomaton_1_1_automaton}{Automaton}} Automaton\+::right\+Quotient (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classautomaton_1_1_automaton}{Automaton}} \&}]{sec\+Automaton }\end{DoxyParamCaption}) const}
+
+
+
+Makes right quotient. L\+E\+F\+T/\+R\+I\+G\+HT. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em sec\+Automaton} & -\/ right (second) automaton of right quotient. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+right\+Quotient -\/ automaton which describes right quotient of two initial automata. 
+\end{DoxyReturn}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Sotnik/\+Documents/\+Visual Studio 2015/\+Projects/\+Automata\+Operations/\+Automata\+Operations/\mbox{\hyperlink{_automaton_8h}{Automaton.\+h}}\item 
+C\+:/\+Users/\+Sotnik/\+Documents/\+Visual Studio 2015/\+Projects/\+Automata\+Operations/\+Automata\+Operations/\mbox{\hyperlink{_automaton_8cpp}{Automaton.\+cpp}}\end{DoxyCompactItemize}
